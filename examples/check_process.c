@@ -22,7 +22,7 @@ int main (int argc, char *argv[]) {
     char cmdline[255];
     proc_info info;
 
-    // Ensure we can open directory.
+    // Ensure we can open direc"tory.
 
     pDir = opendir (proc_dir);
     if (pDir == NULL) {
@@ -36,12 +36,22 @@ int main (int argc, char *argv[]) {
         if ( ! isdigit(entry->d_name[0]) )
             continue;
 
+        // Check if it's user or kernel process
         sprintf(proc_id_dir, "/proc/%s/cmdline", entry->d_name);
-        //get_process_info(proc_id_dir, &info);
         info.is_kernel = check_process_type(proc_id_dir, cmdline);
-        printf("%s Is kernel process: %d\n", cmdline, info.is_kernel);
-        //printf ("%s:%s\n", entry->d_name, cmdline);
+
+        // Get information from the stat file
+        sprintf(proc_id_dir, "/proc/%s/stat", entry->d_name);
+        get_process_info(proc_id_dir, &info);
+        // Print process information
+        printf("\n-------------------------------------\n");
+        printf("\nProcess ID: %d\n", info.process_id);
+        printf("Process Name: %s\n", info.process_name);
+        printf("State: %c\n", info.state);
+        printf("Priority: %ld\n", info.priority);
+        printf("Is Kernel process: %s\n", info.is_kernel ? "Yes" : "No");
     }
+    printf("\n-------------------------------------\n");
 
     // Close directory and exit.
 
@@ -87,26 +97,47 @@ int check_process_type(char *filename, char *procname) {
     return 0;
 }
 
+
 /*
+ * 
+ * Reads the /proc/<pid>/stat file and stores: process id, process name,
+ * and process state in the info variable of type proc_info
+ * Arguments:
+ * filename: the path of the /proc/<pid>/stat of the process
+ * info: proc_info type variable
+ *
+ */
 void get_process_info(char *filename, proc_info *info) {
-  FILE *fp;
-  char *line = NULL;
-  size_t len = 0;
-  procname[0] = '\0';
+    FILE *fp;
+    char *line = NULL;
+    size_t len = 0;
+    char stat_content[1024];
+    stat_content[0] = '\0';
+    unsigned int flags;
 
-  // Open file in read-only mode
-  fp = fopen(filename,"r");
+    // Open file in read-only mode
+    fp = fopen(filename,"r");
 
-  // If file opened successfully, then print the contents
-  if ( fp == NULL ) {
-    printf("Error abriendo archivo %s\n", filename);
-    exit(2);
-   }
+    // If file opened successfully, then print the contents
+    if ( fp == NULL ) {
+        printf("Error abriendo archivo %s\n", filename);
+        exit(2);
+    }
 
-  while(getline(&line, &len, fp) != -1) {
-    sprintf(procname, "%s%s", procname, line);
-  }
+    while(getline(&line, &len, fp) != -1) {
+        sprintf(stat_content, "%s%s", stat_content, line);
+    }
 
-  fclose(fp);
-  free(line);
-}*/
+    // Read the fields and store them in the info variable
+    sscanf(stat_content,
+        "%d (%1024[^)]) %c %*d %*d %*d %*d %*d %*u %*u %*u %*u %*u %*u %*u %*d %*d %ld",
+        &info->process_id,
+        info->process_name,
+        &info->state,
+        &info->priority
+    );
+
+
+    fclose(fp);
+    free(line);
+}
