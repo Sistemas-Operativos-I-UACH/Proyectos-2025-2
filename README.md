@@ -5,6 +5,7 @@ Proyectos de la clase de Sistemas Operativos I de la UACH
 
 * [Iván Chavero (Domador de Computadoras)](examples)
 * [NOMBRE EQUPO](directorio del equipo)
+* [Nicolás Nevárez & Samuel Garcia](Kerneles)
 
 ## Instrucciones
 
