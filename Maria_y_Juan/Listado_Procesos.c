@@ -21,7 +21,7 @@ void InfoProcess(char *direccion, Inform *info){
 	if(!arch){
 	return;
 	}
-	fscanf(arch,"%d (%[^)]) %c %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %ld",
+	fscanf(arch,"%d (%[^)]) %c %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %*ld %ld",
     	&info->process_Id,info->proc_name,&info->state,&info->priority) ;
    
 	fclose(arch);
@@ -91,4 +91,5 @@ int main(){
 	closedir(pDir);
 	return 0;
 }
+
 
