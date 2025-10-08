@@ -7,6 +7,7 @@ Proyectos de la clase de Sistemas Operativos I de la UACH
 * [NOMBRE EQUPO](directorio del equipo)
 * [Nicolás Nevárez & Samuel Garcia](kerneles)
 * [Jackson Velazquez & Uriel Reyes](JacksonVelazquez_UrielReyes)
+* [Maria Pallares & Juan Cobos](Maria_y_Juan)
 
 ## Instrucciones
 
