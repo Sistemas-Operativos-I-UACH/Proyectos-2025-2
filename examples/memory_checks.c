@@ -29,4 +29,6 @@ int main(int argc, char *argv[]) {
 
     printf("buf address: %lu\n", (unsigned long)buf);
     printf("buf2 address: %lu\n", (unsigned long)buf2);
+
+    return 0;
 }
