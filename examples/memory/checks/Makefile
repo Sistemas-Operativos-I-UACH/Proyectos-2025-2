@@ -1,5 +1,8 @@
 all:
 	gcc -ggdb memory_checks.c -o memory_checks
 
-debug: all
-	gdb --args ./memory_checks 123456
+vuln:
+	echo "Creating vulnerable progam"
+	gcc -Wno-stack-protector -z execstack -D_FORTIFY_SOURCE=o -ggdb memory_checks.c -o memory_checks
+debug: vuln
+	gdb --args ./memory_checks
