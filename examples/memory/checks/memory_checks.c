@@ -36,7 +36,7 @@
 */
 
 int main(int argc, char *argv[]) {
-    char buf2[10] = "testbuf";
+    char buf2[] = "testbuf";
     char buf[50];
     if (argc <= 1) {
         printf("Usage: %s <attack string>\n", argv[0]);
