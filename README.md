@@ -9,6 +9,7 @@ Proyectos de la clase de Sistemas Operativos I de la UACH
 * [Jackson Velazquez & Uriel Reyes](JacksonVelazquez_UrielReyes)
 * [Maria Pallares & Juan Cobos](Maria_y_Juan)
 * [Adrian Galicia & Juan Rocha](Adrian_y_Juan)
+* [Alexis Fernandez & David Ledesma & Erick Jaquez](<Los Chinchillescos>)
 
 ## Instrucciones
 
