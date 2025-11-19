@@ -134,6 +134,7 @@ static int __init luffy_load(void)
         goto ClassError;
     }
 
+    // TIP: A partir de aquí es el equivalente a ejecutar mknod
     /* 3. Create Device file */
     if (device_create(my_class, NULL, device_numbers, NULL, DEVICE_NAME) == NULL) {
         printk(KERN_ALERT "luffy: Device could not be created\n");
