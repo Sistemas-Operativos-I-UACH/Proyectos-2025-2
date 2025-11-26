@@ -1,11 +1,11 @@
-* Equipo creado para el tercer parcial de la materia
+Equipo creado para el tercer parcial de la materia
 
 Equipo Tort:
 
-Jackson Armando Velazquez Vargas - 376901
+* Jackson Armando Velazquez Vargas - 376901
 
-Manuel Alberto Miranda marrero - 376990
+* Manuel Alberto Miranda marrero - 376990
 
-Maria Fernanda Pallares Soto - 332257
+* Maria Fernanda Pallares Soto - 332257
 
-Mauricio Adrian Ochoa Carrillo - 377194
+* Mauricio Adrian Ochoa Carrillo - 377194
