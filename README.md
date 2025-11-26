@@ -7,6 +7,7 @@ Proyectos de la clase de Sistemas Operativos I de la UACH
 * [NOMBRE EQUPO](directorio del equipo)
 * [Nicolás Nevárez & Samuel Garcia](kerneles)
 * [Jackson Velazquez & Uriel Reyes](JacksonVelazquez_UrielReyes)
+* [Jackson Velazquez & Manuel Miranda & Maria Pallares & Mauricio Ochoa](EquipoTort)
 * [Maria Pallares & Juan Cobos](Maria_y_Juan)
 * [Adrian Galicia & Juan Rocha](Adrian_y_Juan)
 * [Alexis Fernandez & David Ledesma & Erick Jaquez](<Los Chinchillescos>)
