@@ -4,7 +4,7 @@ Equipo Tort:
 
 * Jackson Armando Velazquez Vargas - 376901
 
-* Manuel Alberto Miranda marrero - 376990
+* Manuel Alberto Miranda Marrero - 376990
 
 * Maria Fernanda Pallares Soto - 332257
 
