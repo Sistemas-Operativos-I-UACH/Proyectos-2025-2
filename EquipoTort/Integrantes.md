@@ -1,3 +1,5 @@
+* Equipo creado para el tercer parcial de la materia
+
 Equipo Tort:
 
 Jackson Armando Velazquez Vargas - 376901
