@@ -1,7 +1,6 @@
 /**
  * @file final_ops.c
  * @brief Módulo de Kernel para Examen Final de Sistemas Operativos
- * @author Tu Nombre (Estudiante)
  * @version 1.0
  */
 
